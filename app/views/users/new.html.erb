@@ -1,0 +1,13 @@
+<div class="panel panel-primary">
+   <div class="panel-heading">Welcome to All of the Things!</div>
+   <div class="panel-body">
+      <%= form_for(:user, url: '/users', html: { :class => "form-inline" }) do |f| %>
+	 <div class="form-group">
+	    <%= f.text_field(:handle, { :class => 'form-control', :placeholder => 'username' }) %>
+	    <%= f.password_field(:password, { :class => 'form-control', :placeholder => 'password' }) %>
+	    <%= f.password_field(:password_confirmation, { :class => 'form-control', :placeholder => 'password confirmation' }) %>
+	    <%= f.submit("Sign me up!", { :class => 'btn btn-submit' }) %>
+	 </div>
+      <% end %>
+   </div>
+</div>

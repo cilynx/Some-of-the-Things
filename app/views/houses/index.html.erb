@@ -1,41 +1,34 @@
-<p id="notice"><%= notice %></p>
-
-<div class="container">
-   <div class="alert alert-info">
-      <strong>Things to look into:</strong><br>
-      <a href="http://www.zillow.com/howto/api/APIOverview.htm">http://www.zillow.com/howto/api/APIOverview.htm</a>
-   </div>
-
-   <h1>Listing Houses</h1>
-
-   <table class="table">
-      <thead>
-	 <tr>
-	    <th>Address</th>
-	    <th>City</th>
-	    <th>State</th>
-	    <th>Zip</th>
-	    <th colspan="3"></th>
-	 </tr>
-      </thead>
-
-      <tbody>
-	 <% @houses.each do |house| %>
-	    <tr>
-	       <td><%= house.address %></td>
-	       <td><%= house.city %></td>
-	       <td><%= house.state %></td>
-	       <td><%= house.zip %></td>
-	       <td><%= link_to 'Show', house %></td>
-	       <td><%= link_to 'Edit', edit_house_path(house) %></td>
-	       <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-	    </tr>
-	 <% end %>
-      </tbody>
-   </table>
-
-   <br>
-
-   <%= link_to 'New House', new_house_path %>
-
+<div class="alert alert-info">
+   <strong>Things to look into:</strong><br>
+   <a href="http://www.zillow.com/howto/api/APIOverview.htm">http://www.zillow.com/howto/api/APIOverview.htm</a>
 </div>
+
+<h1>Listing Houses</h1>
+
+<table class="table">
+   <thead>
+      <tr>
+	 <th>Address</th>
+	 <th>City</th>
+	 <th>State</th>
+	 <th>Zip</th>
+	 <th colspan="3"></th>
+      </tr>
+   </thead>
+
+   <tbody>
+      <% @houses.each do |house| %>
+	 <tr>
+	    <td><%= house.address %></td>
+	    <td><%= house.city %></td>
+	    <td><%= house.state %></td>
+	    <td><%= house.zip %></td>
+	    <td><%= link_to 'Show', house %></td>
+	    <td><%= link_to 'Edit', edit_house_path(house) %></td>
+	    <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	 </tr>
+      <% end %>
+   </tbody>
+</table>
+<br>
+<%= link_to 'New House', new_house_path %>

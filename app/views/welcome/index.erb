@@ -1,10 +1,8 @@
-<div class="container">
-   <div class="row">
-      <div class="col-sm-6"><%= link_to(content_tag(:div, content_tag(:div, content_tag(:span, nil, :class => 'glyphicon glyphicon-home') + " Houses", :class => 'panel-heading') + content_tag(:div, "List top 10 houses here", :class => 'panel-body'), :class => 'panel panel-primary'), { controller: "houses", action: "index" }) %></div>
-      <div class="col-sm-6"><%= link_to(content_tag(:div, content_tag(:div, content_tag(:span, nil, :class => 'glyphicon glyphicon-road') + " Vehicles", :class => 'panel-heading') + content_tag(:div, "List top 10 vehicles here", :class => 'panel-body'), :class => 'panel panel-primary'), { controller: "vehicles", action: "index" }) %></div>
-   </div>
-   <div class="row">
-      <div class="col-sm-6"><%= link_to(content_tag(:div, content_tag(:div, content_tag(:span, nil, :class => 'glyphicon glyphicon-usd') + " Accounts", :class => 'panel-heading') + content_tag(:div, "List top 10 accounts here", :class => 'panel-body'), :class => 'panel panel-primary'), { controller: "accounts", action: "index" }) %></div>
-      <div class="col-sm-6"><%= link_to(content_tag(:div, content_tag(:div, content_tag(:span, nil, :class => 'glyphicon glyphicon-list') + " ToDo", :class => 'panel-heading') + content_tag(:div, "List top 10 todos here", :class => 'panel-body'), :class => 'panel panel-primary'), { controller: "todos", action: "index" }) %></div>
-   </div>
+<div class="row">
+   <div class="col-sm-6"><%= link_to(content_tag(:div, content_tag(:div, content_tag(:span, nil, :class => 'glyphicon glyphicon-home') + " Houses", :class => 'panel-heading') + content_tag(:div, "List top 10 houses here", :class => 'panel-body'), :class => 'panel panel-primary'), { controller: "houses", action: "index" }) %></div>
+   <div class="col-sm-6"><%= link_to(content_tag(:div, content_tag(:div, content_tag(:span, nil, :class => 'glyphicon glyphicon-road') + " Vehicles", :class => 'panel-heading') + content_tag(:div, "List top 10 vehicles here", :class => 'panel-body'), :class => 'panel panel-primary'), { controller: "vehicles", action: "index" }) %></div>
+</div>
+<div class="row">
+   <div class="col-sm-6"><%= link_to(content_tag(:div, content_tag(:div, content_tag(:span, nil, :class => 'glyphicon glyphicon-usd') + " Accounts", :class => 'panel-heading') + content_tag(:div, "List top 10 accounts here", :class => 'panel-body'), :class => 'panel panel-primary'), { controller: "accounts", action: "index" }) %></div>
+   <div class="col-sm-6"><%= link_to(content_tag(:div, content_tag(:div, content_tag(:span, nil, :class => 'glyphicon glyphicon-list') + " ToDo", :class => 'panel-heading') + content_tag(:div, "List top 10 todos here", :class => 'panel-body'), :class => 'panel panel-primary'), { controller: "todos", action: "index" }) %></div>
 </div>

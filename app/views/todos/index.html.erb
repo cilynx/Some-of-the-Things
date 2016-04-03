@@ -1,53 +1,48 @@
-<p id="notice"><%= notice %></p>
-
-<div class="container">
-   <div class="alert alert-info">
-      <strong>Things to look into:</strong><br>
-      <a href="https://todoist.com">https://todoist.com</a><br>
-      <a href="https://wunderlist.com">https://wunderlist.com</a>
-   </div>
-
-
-   <h1>Listing Todos</h1>
-
-   <table class="table">
-      <thead>
-	 <tr>
-	    <th>Title</th>
-	    <th>Check</th>
-	    <th>Priority</th>
-	    <th>Created at</th>
-	    <th>Modified at</th>
-	    <th>Due at</th>
-	    <th>Notes</th>
-	    <th>Link</th>
-	    <th>Category</th>
-	    <th colspan="3"></th>
-	 </tr>
-      </thead>
-
-      <tbody>
-	 <% @todos.each do |todo| %>
-	    <tr>
-	       <td><%= todo.title %></td>
-	       <td><%= todo.check %></td>
-	       <td><%= todo.priority %></td>
-	       <td><%= todo.created_at %></td>
-	       <td><%= todo.modified_at %></td>
-	       <td><%= todo.due_at %></td>
-	       <td><%= todo.notes %></td>
-	       <td><%= todo.link %></td>
-	       <td><%= todo.category %></td>
-	       <td><%= link_to 'Show', todo %></td>
-	       <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
-	       <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-	    </tr>
-	 <% end %>
-      </tbody>
-   </table>
-
-   <br>
-
-   <%= link_to 'New Todo', new_todo_path %>
-
+<div class="alert alert-info">
+   <strong>Things to look into:</strong><br>
+   <a href="https://todoist.com">https://todoist.com</a><br>
+   <a href="https://wunderlist.com">https://wunderlist.com</a>
 </div>
+
+
+<h1>Listing Todos</h1>
+
+<table class="table">
+   <thead>
+      <tr>
+	 <th>Title</th>
+	 <th>Check</th>
+	 <th>Priority</th>
+	 <th>Created at</th>
+	 <th>Modified at</th>
+	 <th>Due at</th>
+	 <th>Notes</th>
+	 <th>Link</th>
+	 <th>Category</th>
+	 <th colspan="3"></th>
+      </tr>
+   </thead>
+
+   <tbody>
+      <% @todos.each do |todo| %>
+	 <tr>
+	    <td><%= todo.title %></td>
+	    <td><%= todo.check %></td>
+	    <td><%= todo.priority %></td>
+	    <td><%= todo.created_at %></td>
+	    <td><%= todo.modified_at %></td>
+	    <td><%= todo.due_at %></td>
+	    <td><%= todo.notes %></td>
+	    <td><%= todo.link %></td>
+	    <td><%= todo.category %></td>
+	    <td><%= link_to 'Show', todo %></td>
+	    <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
+	    <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	 </tr>
+      <% end %>
+   </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Todo', new_todo_path %>
