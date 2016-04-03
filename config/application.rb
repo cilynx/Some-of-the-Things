@@ -21,3 +21,9 @@ module RubyGettingStarted
     # config.i18n.default_locale = :de
   end
 end
+
+# Don't use generator stylesheets (we're using Bootstrap)
+config.generators do |g|
+   g.stylesheets false
+end
+
