@@ -22,8 +22,3 @@ module RubyGettingStarted
   end
 end
 
-# Don't use generator stylesheets (we're using Bootstrap)
-config.generators do |g|
-   g.stylesheets false
-end
-
