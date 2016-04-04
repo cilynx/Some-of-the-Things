@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+
 <p>
   <strong>Year:</strong>
   <%= @vehicle.year %>
@@ -16,6 +18,11 @@
 <p>
   <strong>Vin:</strong>
   <%= @vehicle.vin %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @vehicle.user %>
 </p>
 
 <%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |

@@ -1,6 +1,4 @@
 class VehiclesController < ApplicationController
-
-   before_action :authorize
    before_action :set_vehicle, only: [:show, :edit, :update, :destroy]
 
    # GET /vehicles
@@ -27,7 +25,7 @@ class VehiclesController < ApplicationController
    # POST /vehicles.json
    def create
       @vehicle = Vehicle.new(vehicle_params)
-
+      @vehicle.user = current_user
       respond_to do |format|
 	 if @vehicle.save
 	    format.html { redirect_to @vehicle, notice: 'Vehicle was successfully created.' }
@@ -71,6 +69,6 @@ class VehiclesController < ApplicationController
 
    # Never trust parameters from the scary internet, only allow the white list through.
    def vehicle_params
-      params.require(:vehicle).permit(:year, :make, :model, :vin)
+      params.require(:vehicle).permit(:year, :make, :model, :vin, :user_id)
    end
 end
